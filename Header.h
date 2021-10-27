@@ -54,7 +54,6 @@ void initial_register()
 	srand(time(0));
 	int rand_val = 0;
 
-	//считываем положение курсора
 	POINT p;
 	int arr[18];
 	for (int i = 0; i < 18; i++)
@@ -66,7 +65,7 @@ void initial_register()
 		Sleep(500);
 	}
 	
-	//случайным образом заполняем начальное значение регистра L11
+	
 	for (int i = 0; i < n1; i++)
 	{
 		register_L11[i] = arr[0]%2;
@@ -79,7 +78,7 @@ void initial_register()
 		register_L11[temp] = (register_L11[temp]+1) % 2;
 	}
 
-	//случайным образом заполняем начальное значение регистра L9
+
 	for (int i = 0; i < n2; i++)
 	{
 		register_L9[i] = arr[1] % 2;
@@ -92,7 +91,7 @@ void initial_register()
 		register_L9[temp] = (register_L9[temp] + 1) % 2;
 	}
 
-	//случайным образом заполняем начальное значение регистра L10
+
 	for (int i = 0; i < n3; i++)
 	{
 		register_L10[i] = arr[2] % 2;
@@ -106,7 +105,7 @@ void initial_register()
 	}
 
 	int j = 3;
-	//случайным образом заполняем начальное значение регистра L20
+
 	for (int i = 0; i < n4; i++)
 	{
 		register_L20[i] = arr[j] % 2;
@@ -123,7 +122,7 @@ void initial_register()
 		register_L20[temp] = (register_L20[temp] + 1) % 2;
 	}
 
-	//случайным образом заполняем начальное значение регистра L89
+
 	for (int i = 0; i < 89; i++)
 	{
 		register_L89[i] = arr[j] % 2;
@@ -248,7 +247,7 @@ int Biblio()
 	ifstream in("siempre_estoy_solo.txt");
 	if (!in.is_open())
 	{
-		cout << "Файл не может быть открыт!\n";
+		cout << "Р¤Р°Р№Р» РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚РєСЂС‹С‚!\n";
 		return -1;
 	}
 	char a;
@@ -272,35 +271,6 @@ int Biblio()
 		}
 	}
 }
-/*int Biblio_picture()
-{
-	ifstream in("photo.bmp");
-	if (!in.is_open())
-	{
-		cout << "Файл не может быть открыт!\n";
-		return -1;
-	}
-	char a;
-	for (int i = 0; i < length_of_sq; i++)
-	{
-		in.get(a);
-		for (int j = 0; j < 8; j++)
-		{
-			int temp = (int)a;
-			if (temp < 0)
-				temp += 256;
-			if (i >= length_of_sq)
-			{
-				j = 8;
-			}
-			else
-			{
-				sq[i] = help[temp][j];
-				i++;
-			}
-		}
-	}
-}*/
 
 void Lehmer(int modif)
 {
