@@ -13,7 +13,7 @@ using namespace std;
 
 
 ofstream out;
-const long int length_of_sq = 8000000;
+const long int length_of_sq = 2000000;
 const int n1 = 11;
 const int n2 = 9;
 const int n3 = 10;
