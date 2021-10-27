@@ -471,8 +471,19 @@ void probabTest()
 	{
 		for (int j = 0; j < 8; j++)
 		{
-			arr[j] = sq[i];
-			i++;
+			arr[j] = 0;
+		}	
+		for (int j = 0; j < 8; j++)
+		{
+			if (i >= length_of_sq)
+			{
+				j = 8;
+			}
+			else
+			{
+				arr[j] = sq[i];
+				i++;
+			}
 		}
 		int temp = binToDec(arr);
 		count[temp]++;
@@ -521,14 +532,36 @@ void indepTest()
 	{
 		for (int j = 0; j < 8; j++)
 		{
-			arr[j] = sq[i];
-			i++;
+			arr[j] = 0;
+		}
+		for (int j = 0; j < 8; j++)
+		{
+			if (i >= length_of_sq)
+			{
+				j = 8;
+			}
+			else
+			{
+				arr[j] = sq[i];
+				i++;
+			}
 		}
 		int temp1 = binToDec(arr);
 		for (int j = 0; j < 8; j++)
 		{
-			arr[j] = sq[i];
-			i++;
+			arr[j] = 0;
+		}
+		for (int j = 0; j < 8; j++)
+		{
+			if (i >= length_of_sq)
+			{
+				j = 8;
+			}
+			else
+			{
+				arr[j] = sq[i];
+				i++;
+			}
 		}
 		int temp2 = binToDec(arr);
 		count[temp1][temp2]++;
